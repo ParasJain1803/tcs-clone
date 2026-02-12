@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+ 
+.is-open {
+  @include fade("show");
+}
+
+.is-active {
+  background-color: $white-primary;
+  color: $black-primary;
+  font-weight: 600;
+}
