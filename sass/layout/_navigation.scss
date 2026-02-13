@@ -16,14 +16,13 @@ header {
   font-family: $font-primary;
 
   &__logo {
-   
     &--img {
       display: block;
       height: 50px;
       width: auto;
       transition: height 0.3s ease;
     }
-    &--tcs > &--img{
+    &--tcs > &--img {
       height: 40px;
       width: auto;
       object-fit: cover;
@@ -34,19 +33,18 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none; 
+    display: none;
     align-items: center;
     gap: 20px;
     font-family: $font-secondary;
-    &--primary{
+    &--primary {
       color: $white-primary;
       font-family: inherit;
     }
-    &--utility{
+    &--utility {
       color: $gray-primary;
       font-family: inherit;
     }
-
   }
 
   &__link {
@@ -98,7 +96,7 @@ header {
     &--active {
       .nav__hamburger-line {
         &:nth-child(1) {
-          transform: rotate(45deg) translateY(10px);
+          transform: rotate(45deg) translate(8px, 8px);
         }
 
         &:nth-child(2) {
@@ -106,7 +104,7 @@ header {
         }
 
         &:nth-child(3) {
-          transform: rotate(-45deg) translateY(-10px);
+          transform: rotate(-45deg) translate(7px, -6px);
         }
       }
     }
@@ -126,7 +124,7 @@ header {
 
   &__actions {
     order: 3;
-    margin-left: auto; 
+    margin-left: auto;
     .nav__list--utility {
       display: none;
     }
@@ -148,7 +146,10 @@ header {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-100%);
-    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease,
+      transform 0.4s ease;
 
     &.is-active {
       opacity: 1;
@@ -275,7 +276,6 @@ header {
     font-size: remCalc(14px);
     font-family: $font-secondary;
   }
-
 }
 
 @include tablet {

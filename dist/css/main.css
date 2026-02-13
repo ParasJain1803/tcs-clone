@@ -22,6 +22,13 @@
   font-weight: 600;
 }
 
+.footer {
+  text-align: center;
+  padding: 0.6rem;
+  background-color: #242526;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 header {
   position: relative;
 }
@@ -109,13 +116,13 @@ header {
   width: 70%;
 }
 .nav__hamburger--active .nav__hamburger-line:nth-child(1) {
-  transform: rotate(45deg) translateY(10px);
+  transform: rotate(45deg) translate(8px, 8px);
 }
 .nav__hamburger--active .nav__hamburger-line:nth-child(2) {
   opacity: 0;
 }
 .nav__hamburger--active .nav__hamburger-line:nth-child(3) {
-  transform: rotate(-45deg) translateY(-10px);
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 .nav__logo--tcs {
   order: 1;
