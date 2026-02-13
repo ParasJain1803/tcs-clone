@@ -255,13 +255,13 @@ function createDropdownElement(data, key) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const main = document.querySelector("main.wrapper");
+  const nav = document.querySelector(".nav");
   const navLinks = document.querySelectorAll(".nav__link");
 
   Object.keys(navData).forEach((key) => {
     const dropdown = createDropdownElement(navData[key], key);
     dropdown.classList.add("dropdown--hidden");
-    main.appendChild(dropdown);
+    nav.appendChild(dropdown);
   });
 
   let hideTimeout = null;

@@ -6,8 +6,12 @@
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
   padding: 20px;
+
+  @media only screen and (max-width: 650px) {
+    overflow-x: auto;
+    gap: 0.5rem;
+  }
 
   &__btn {
     padding: 0 remCalc(20px);
@@ -18,17 +22,30 @@
     cursor: pointer;
     font-weight: 500;
     position: relative;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     border-radius: 50px;
     color: $white-primary;
     font-family: $font-primary;
     font-size: remCalc(14px);
 
+    @media only screen and (max-width: 650px) {
+    font-size: remCalc(12px);
+      
+    }
     &:hover {
       color: $black-primary;
       background-color: $white-primary;
     }
+  
+    &.is-active {
+      background-color: $white-primary;
+      color: $black-primary;
+      border-color: $white-primary;
+      font-weight: 600;
+    }
   }
-}
+
+  }
+
 
 

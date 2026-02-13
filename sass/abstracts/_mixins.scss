@@ -54,3 +54,25 @@
       opacity 0.5s ease-in-out;
   }
 }
+
+@mixin slideDown($type) {
+  transform-origin: top;
+  
+  @if $type== "hide" {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition:
+      visibility 0.3s ease,
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  } @else if $type== "show" {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      visibility 0.3s ease,
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+}

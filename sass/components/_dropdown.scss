@@ -3,10 +3,10 @@
 
 .dropdown {
     position: absolute;
-    top: 0;
+    top: 100%;
     left: 0;
     width: 100%;
-    min-height: 50vh;
+    min-height: 70vh;
     background-color: $bg-secondary;
     display: none;
     justify-content: space-between;
@@ -14,18 +14,18 @@
     padding: 20px 60px;
     gap: 40px;
     z-index: 100;
-
+    box-shadow: 0 0 10px rgba($black-primary, 0.5);
     @include desktop {
         display: flex;
     }
 
     &--hidden {
-        @include fade("hide");
+        @include slideDown("hide");
         display: none;
     }
 
     &--visible {
-        @include fade("show");
+        @include slideDown("show");
         
         @include desktop {
             display: flex;

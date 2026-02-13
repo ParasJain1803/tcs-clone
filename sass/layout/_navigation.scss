@@ -16,11 +16,17 @@ header {
   font-family: $font-primary;
 
   &__logo {
+   
     &--img {
       display: block;
       height: 50px;
       width: auto;
       transition: height 0.3s ease;
+    }
+    &--tcs > &--img{
+      height: 40px;
+      width: auto;
+      object-fit: cover;
     }
   }
 
