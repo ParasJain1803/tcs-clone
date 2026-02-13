@@ -58,11 +58,36 @@
               class="nav__search--img"
               src="./assets/svg/search-icon.svg"
               alt="Search"
+              id="searchIcon"
             />
           </div>
         </div>
 
-        <!-- Hamburger -->
+        <div class="nav__search-bar" id="searchBar">
+          <div class="nav__search-container">
+            <img
+              class="nav__search-bar--icon"
+              src="./assets/svg/search-icon.svg"
+              alt="Search"
+            />
+            <input
+              type="text"
+              class="nav__search-input"
+              id="searchInput"
+              placeholder="What are you looking for?"
+              autocomplete="off"
+            />
+            <button class="nav__search-close" id="searchClose">
+              <img
+                class="nav__search-close--img"
+                src="./assets/svg/close-img.svg"
+                alt="close"
+              />
+            </button>
+          </div>
+          <div class="nav__search-dropdown" id="searchDropdown"></div>
+        </div>
+
         <div class="nav__hamburger">
           <span class="nav__hamburger-line"></span>
           <span class="nav__hamburger-line nav__hamburger-line--middle"></span>
@@ -70,7 +95,8 @@
         </div>
       </nav>
 
-      <!-- Mobile Menu -->
+      <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
       <div class="mobile-menu mobile-menu--hidden">
         <div class="mobile-menu__container">
           <div class="mobile-menu__section">
@@ -221,6 +247,7 @@
     </main>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/dropdown.js"></script>
+    <script src="./js/search.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

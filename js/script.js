@@ -34,11 +34,9 @@ function createCardElement(cardData) {
   card.className = "card";
   card.dataset.category = cardData.tag.toLowerCase();
 
-  //  media container
   const mediaDiv = document.createElement("div");
   mediaDiv.className = "card__media";
 
-  //  image
   const img = document.createElement("img");
   img.dataset.src = cardData.imageUrl;
   img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23333'/%3E%3C/svg%3E";
@@ -47,35 +45,28 @@ function createCardElement(cardData) {
 
   mediaDiv.appendChild(img);
 
-  //  content container
   const contentDiv = document.createElement("div");
   contentDiv.className = "card__content";
 
-  //  title
   const title = document.createElement("h3");
   title.className = "card__title";
   title.textContent = cardData.title;
 
-  //  description
   const description = document.createElement("p");
   description.className = "card__description";
   description.textContent = cardData.description;
 
-  //  category
   const category = document.createElement("span");
   category.className = "card__category";
   category.textContent = cardData.tag;
 
-  //  content
   contentDiv.appendChild(title);
   contentDiv.appendChild(description);
   contentDiv.appendChild(category);
 
-  //  card
   card.appendChild(mediaDiv);
   card.appendChild(contentDiv);
 
-  //  lazy loading
   imageObserver.observe(img);
 
   return card;
