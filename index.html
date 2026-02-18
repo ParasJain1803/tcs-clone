@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__logo nav__logo--tcs">
+          <img
+            class="nav__logo--img"
+            src="./assets/svg/tcs logo.svg"
+            alt="TCS logo"
+          />
+        </div>
+
+        <ul class="nav__list nav__list--primary">
+          <li class="nav__item">
+            <a href="#" class="nav__link link-underline">What we do</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link-underline">Who we are</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link-underline">Insights</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link-underline">Careers</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link-underline">Investors</a>
+          </li>
+        </ul>
+
+        <div class="nav__logo nav__logo--tata">
+          <img
+            class="nav__logo--img"
+            src="./assets/svg/tata logo.svg"
+            alt="Tata logo"
+          />
+        </div>
+
+        <div class="nav__actions">
+          <ul class="nav__list nav__list--utility">
+            <li class="nav__item">
+              <a href="#" class="nav__link">CONTACT US</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">TCS WORLDWIDE</a>
+            </li>
+          </ul>
+
+          <div class="nav__search">
+            <img
+              class="nav__search--img"
+              src="./assets/svg/search-icon.svg"
+              alt="Search"
+              id="searchIcon"
+            />
+          </div>
+        </div>
+
+        <div class="nav__search-bar" id="searchBar">
+          <div class="nav__search-container">
+            <img
+              class="nav__search-bar--icon"
+              src="./assets/svg/search-icon.svg"
+              alt="Search"
+            />
+            <input
+              type="text"
+              class="nav__search-input"
+              id="searchInput"
+              placeholder="What are you looking for?"
+              autocomplete="off"
+            />
+            <button class="nav__search-close" id="searchClose">
+              <img
+                class="nav__search-close--img"
+                src="./assets/svg/close-img.svg"
+                alt="close"
+              />
+            </button>
+          </div>
+          <div class="nav__search-dropdown" id="searchDropdown"></div>
+        </div>
+
+        <div class="nav__hamburger">
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line nav__hamburger-line--middle"></span>
+          <span class="nav__hamburger-line"></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+      <div class="mobile-menu mobile-menu--hidden">
+        <div class="mobile-menu__container">
+          <div class="mobile-menu__section">
+            <button class="mobile-menu__header">
+              <span class="mobile-menu__title">What we do</span>
+              <span class="mobile-menu__icon">▼</span>
+            </button>
+            <div class="mobile-menu__content">
+              <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Overview</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link"
+                        >Corporate Profile</a
+                      >
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">TCS Way</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Industries</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Banking</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Retail</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Services</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link"
+                        >Cybersecurity</a
+                      >
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Cloud</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link"
+                      >Product and Platforms</a
+                    >
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">TCS BaNCS</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Ignio</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link"
+                      >Research and Innovation</a
+                    >
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">TCS Pace</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link"
+                        >Innovation Labs</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mobile-menu__section">
+            <button class="mobile-menu__header">
+              <span class="mobile-menu__title">Who we are</span>
+              <span class="mobile-menu__icon">▼</span>
+            </button>
+            <div class="mobile-menu__content">
+              <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Overview</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link"
+                        >Board of Directors</a
+                      >
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Values</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">About Us</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Purpose</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Heritage</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Leadership</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Executives</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Advisory</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Heritage</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Milestones</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Evolution</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Sustainability</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">ESG Report</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Net Zero</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mobile-menu__section">
+            <button class="mobile-menu__header">
+              <span class="mobile-menu__title">Insights</span>
+              <span class="mobile-menu__icon">▼</span>
+            </button>
+            <div class="mobile-menu__content">
+              <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Overview</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Case Studies</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Perspectives</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link"
+                      >Digital Transformation</a
+                    >
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Strategy</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Execution</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link"
+                      >Artificial Intelligence</a
+                    >
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link"
+                        >Generative AI</a
+                      >
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">ML Ops</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Cloud</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Multi Cloud</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Hybrid Cloud</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Cyber Security</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link"
+                        >Threat Detection</a
+                      >
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Zero Trust</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mobile-menu__section">
+            <button class="mobile-menu__header">
+              <span class="mobile-menu__title">Careers</span>
+              <span class="mobile-menu__icon">▼</span>
+            </button>
+            <div class="mobile-menu__content">
+              <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Overview</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Life at TCS</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Benefits</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">India</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Freshers</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Experienced</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Americas</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link"
+                        >North America</a
+                      >
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link"
+                        >Latin America</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link">Europe</a>
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">UK & Ireland</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link"
+                        >Mainland Europe</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-menu__item">
+                  <div class="mobile-menu__item-header">
+                    <a href="#" class="mobile-menu__link"
+                      >Middle East and Africa</a
+                    >
+                    <span class="mobile-menu__plus">+</span>
+                  </div>
+                  <ul class="mobile-menu__sub-list">
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Middle East</a>
+                    </li>
+                    <li class="mobile-menu__sub-item">
+                      <a href="#" class="mobile-menu__sub-link">Africa</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="wrapper">
+      <div class="filter">
+        <button class="filter__btn is-active" data-filter="all">All</button>
+        <button class="filter__btn" data-filter="research">Research</button>
+        <button class="filter__btn" data-filter="news">News</button>
+        <button class="filter__btn" data-filter="production">Production</button>
+        <button class="filter__btn" data-filter="blog">Blog</button>
+      </div>
+      <div class="card-list"></div>
+    </main>
+    <footer class="footer">&copy; Paras Jain | 2026</footer>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/dropdown.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/search.js"></script>
+  </body>
+</html>

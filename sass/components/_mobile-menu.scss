@@ -1,0 +1,238 @@
+@use "../base" as *;
+@use "../abstracts" as *;
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 85%;
+  max-width: 400px;
+  background-color: $bg-secondary;
+  z-index: 998;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 70px;
+  transition:
+    transform 0.4s ease,
+    visibility 0.4s ease;
+
+  right: 0;
+  left: auto;
+  transform: translateX(100%);
+  box-shadow: -4px 0 12px rgba($black-primary, 0.5);
+
+  &--hidden {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+
+  &--visible {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  @include tablet {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+    box-shadow: 4px 0 12px rgba($black-primary, 0.5);
+
+    &--hidden {
+      transform: translateX(-100%);
+    }
+
+    &--visible {
+      transform: translateX(0);
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba($white-primary, 0.05);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($white-primary, 0.2);
+    border-radius: 3px;
+
+    &:hover {
+      background: rgba($white-primary, 0.3);
+    }
+  }
+
+  &__container {
+    width: 100%;
+    padding: 0;
+  }
+
+  &__section {
+    border-bottom: 1px solid rgba($gray-primary, 0.2);
+  }
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba($white-primary, 0.05);
+    }
+  }
+
+  &__title {
+    font-size: remCalc(18px);
+    font-family: $font-primary;
+    color: $white-primary;
+    text-align: left;
+  }
+
+  &__icon {
+    font-size: remCalc(14px);
+    color: $white-primary;
+    transition: transform 0.3s ease;
+  }
+
+  &__section--active &__icon {
+    transform: rotate(180deg);
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: rgba($black-primary, 0.3);
+  }
+
+  &__section--active &__content {
+    max-height: 500px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba($gray-primary, 0.1);
+    transition: background-color 0.3s ease;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($white-primary, 0.05);
+    }
+  }
+
+  &__link {
+    flex: 1;
+    text-decoration: none;
+    font-size: remCalc(16px);
+    font-family: $font-secondary;
+    color: $gray-primary;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $white-primary;
+    }
+  }
+
+  &__plus {
+    font-size: remCalc(20px);
+    color: $white-primary;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+  }
+
+  &__item--active &__plus {
+    transform: rotate(45deg);
+  }
+
+  &__sub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgba($black-primary, 0.2);
+    transition: max-height 0.35s ease-out;
+  }
+
+  &__item--active &__sub-list {
+    max-height: 200px;
+  }
+
+  &__sub-item {
+    padding: 12px 40px;
+    border-bottom: 1px solid rgba($gray-primary, 0.05);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: rgba($white-primary, 0.03);
+    }
+  }
+
+  &__sub-link {
+    text-decoration: none;
+    font-size: remCalc(14px);
+    font-family: $font-secondary;
+    color: rgba($gray-primary, 0.8);
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $white-primary;
+    }
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($black-primary, 0.7);
+  z-index: 997;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}

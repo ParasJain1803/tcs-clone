@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+.is-active {
+  background-color: $white-primary;
+  color: $black-primary;
+  font-weight: 600;
+}
