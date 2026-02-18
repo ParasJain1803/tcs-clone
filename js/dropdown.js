@@ -87,7 +87,7 @@ const navData = {
       },
     ],
   },
-  "insights": {
+  insights: {
     defaultTitle:
       "Get expert analysis and perspectives on the trends shaping the future.",
     defaultDescription:
@@ -132,7 +132,7 @@ const navData = {
       },
     ],
   },
-  "careers": {
+  careers: {
     defaultTitle: "Build your future with a community of innovators.",
     defaultDescription:
       "We are looking for passionate individuals who want to make a difference. Join us and help shape the future.",
@@ -215,7 +215,7 @@ function createDropdownElement(data, key) {
   data.items.forEach((item, index) => {
     const li = document.createElement("li");
     li.className = "dropdown__item";
-    
+
     if (index === 0) {
       li.classList.add("dropdown__item--active");
     }
@@ -232,9 +232,9 @@ function createDropdownElement(data, key) {
       list.querySelectorAll(".dropdown__item").forEach((item) => {
         item.classList.remove("dropdown__item--active");
       });
-      
+
       li.classList.add("dropdown__item--active");
-      
+
       h3.textContent = item.title;
       p.textContent = item.description;
       a.textContent = item.cta;
@@ -252,7 +252,6 @@ function createDropdownElement(data, key) {
 
   return dropdown;
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav");
@@ -286,16 +285,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showDropdown(key) {
     clearTimeout(hideTimeout);
-    
+
     document.querySelectorAll(".dropdown").forEach((d) => {
       d.classList.remove("dropdown--visible");
       d.classList.add("dropdown--hidden");
     });
 
+    document.querySelectorAll(".nav__link").forEach((link) => {
+      link.classList.remove("is-active");
+    });
+
     const dropdown = document.getElementById(`dropdown-${key}`);
+    const activeLink = document.querySelector(
+      `.nav__link[data-dropdown="${key}"]`,
+    );
+
     if (dropdown) {
       dropdown.classList.remove("dropdown--hidden");
       dropdown.classList.add("dropdown--visible");
+      if (activeLink) activeLink.classList.add("is-active");
 
       dropdown.addEventListener("mouseenter", () => {
         clearTimeout(hideTimeout);
@@ -311,9 +319,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function hideDropdown(key) {
     const dropdown = document.getElementById(`dropdown-${key}`);
+    const activeLink = document.querySelector(
+      `.nav__link[data-dropdown="${key}"]`,
+    );
+
     if (dropdown) {
       dropdown.classList.remove("dropdown--visible");
       dropdown.classList.add("dropdown--hidden");
+      if (activeLink) activeLink.classList.remove("is-active");
     }
   }
 });

@@ -16,12 +16,6 @@
   font-style: normal;
   font-display: swap;
 }
-.is-active {
-  background-color: #fff;
-  color: #000;
-  font-weight: 600;
-}
-
 .footer {
   text-align: center;
   padding: 0.6rem;
@@ -80,6 +74,10 @@ header {
   transition: color 0.3s ease;
   color: inherit;
   font-family: "Montserrat", sans-serif;
+}
+.nav__link.is-active {
+  background: transparent;
+  color: inherit;
 }
 .nav__search {
   display: flex;
@@ -562,7 +560,6 @@ header {
 
 .link-underline {
   position: relative;
-  display: inline-block;
   text-decoration: none;
 }
 .link-underline::after {
@@ -577,7 +574,7 @@ header {
   transform-origin: left;
   transition: transform 0.5s ease;
 }
-.link-underline:hover::after {
+.link-underline:hover::after, .link-underline.is-active::after {
   transform: scaleX(1);
 }
 

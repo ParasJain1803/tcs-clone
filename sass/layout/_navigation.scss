@@ -54,6 +54,11 @@ header {
     transition: color 0.3s ease;
     color: inherit;
     font-family: $font-secondary;
+
+    &.is-active {
+      background: transparent;
+      color: inherit;
+    }
   }
 
   &__search {
