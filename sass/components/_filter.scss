@@ -11,6 +11,9 @@
   @media only screen and (max-width: 650px) {
     overflow-x: auto;
     gap: 0.5rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__btn {
@@ -29,14 +32,13 @@
     font-size: remCalc(14px);
 
     @media only screen and (max-width: 650px) {
-    font-size: remCalc(12px);
-      
+      font-size: remCalc(12px);
     }
     &:hover {
       color: $black-primary;
       background-color: $white-primary;
     }
-  
+
     &.is-active {
       background-color: $white-primary;
       color: $black-primary;
@@ -44,8 +46,4 @@
       font-weight: 600;
     }
   }
-
-  }
-
-
-
+}

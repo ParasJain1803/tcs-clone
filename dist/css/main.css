@@ -399,6 +399,9 @@ header {
     overflow-x: auto;
     gap: 0.5rem;
   }
+  .filter::-webkit-scrollbar {
+    display: none;
+  }
 }
 .filter__btn {
   padding: 0 1.25rem;
